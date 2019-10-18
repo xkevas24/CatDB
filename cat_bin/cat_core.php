@@ -65,21 +65,24 @@ function order_work($order){
         case "update":
             $operation_type="update";
             break;
+        case "select":
+            $operation_type="select";
+            break;
     }
 
     switch($qualification_info){
         case "where":
-            $qualification_info=1;
+            $qualification_info=1;  //有条件
             break;
         default:
-            $qualification_info=0;
+            $qualification_info=0;  //无条件
             break;
     }
     $result=array(
-      "ot"=> $operation_type,
-      "tg"=>$target,
-        "iq"=>$qualification_info,
-        "q"=>$qualification
+      "ot"=> $operation_type,           //操作类型
+      "tg"=>$target,                    //操作目标
+        "iq"=>$qualification_info,      //条件判断符
+        "q"=>$qualification             //条件内容
     );
     return $result;
 }
