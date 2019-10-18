@@ -11,7 +11,7 @@ CatDB应是一款开源的、依赖于WEB应用的、以内存方式进行数据
 2018/9/27 结构确定<br>
 <br>
 <h3>CatDB是一个自主研发的文件型的NoSQL（只处理key-value键值对），以加密文件的形式存储在硬盘上。因此该数据库可以方便地进行转移。如果对其读写速度有要求，可以将其转移至内存盘上。CatDB依赖于PHP，采用PHP编写的语法解释器和指令方法。</h3><br>
-數據庫文件以加密的文本存儲在cat_table/目錄下的Table_Name.cat文件中<br>
+數據庫文件以加密的文本存儲在cat_table/目錄下的Table_Name.cbd文件中。*.cdb是CatDB的數據庫文件。極為重要。<br>
 第一步、连接数据库<br>
 <code>
 require("cat_bin/cat_base.php");<br>
